@@ -1,0 +1,135 @@
+body {
+    font-family: Papyrus;
+    font-size: 4vh;
+    color: white;
+    Background-color: black;
+}
+
+.head {
+    overflow: hidden;
+}
+
+.header1 {
+    margin-top: -315px;
+    font-size: 7vh;
+    color: #FE9001;
+    text-shadow: -1px 0 black, 0 3px black, 1px 0 black, 0 -1px black;
+    position: absolute;
+}
+
+#headImage {
+    margin-bottom: 4em;	
+    background-size: cover;
+    Background-position: 100% 85%;
+    height: 40vh;
+    opacity: 0.4;
+}
+
+#header2 {
+    margin-bottom: 1em;
+}
+
+.ingredient {
+    color: #622813;
+    text-decoration: underline;
+}
+
+.burgerName {
+    font-size: 4.5vh;
+}
+
+#veg {
+    color: #0C560C;
+}
+
+.burgers {
+    font-size: 3.7vh;
+    font-weight: bold;
+    color: black;
+    border-width: 4px;
+    border-style: dashed;
+    border-color: black;
+    background-image: url(https://sandyridgefarmsinc.com/wp-content/uploads/2018/07/light-wood-background.jpg);
+    background-size: cover;
+    background-position: 100% 50%;
+
+}
+
+.select {
+    display: grid;
+    grid-row-gap: 30px;
+}
+
+.burger1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.burger2 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.burger3 {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.img1 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.img2 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.img3 {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.info1 {
+    grid-column: 1;
+    grid-row: 3;    
+}
+
+.info2 {
+    grid-column: 2;
+    grid-row: 3;    
+}
+
+.info3 {
+    grid-column: 3;
+    grid-row: 3;    
+}
+
+#custInfo {
+    margin-bottom: 4em;
+    margin-top: 4em;
+    border-width: 2px;
+    border-style: dashed;
+    border-color: white;
+}
+
+#info {
+    margin-top: 2em;
+}
+
+button:hover {
+    background-color:#4CAF50;
+    cursor: progress;
+}
+
+.form {
+    font-size: 3.5vh;
+}
+
+#gender {
+    font-size: 4vh;
+}
+
+#button {
+    margin: 5em;
+}

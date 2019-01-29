@@ -1,9 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
+  <section class = "head">
     <head>
-        <title>DELI-VERY</title>
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <title>Best Burgers</title>
+      <meta charset="utf-8"/>
+      <div id = "headImage">
+        <img src = "http://bullcityevents.com/wp/wp-content/uploads/2015/07/grill-on-fire.jpg" width="100%" height="250px">
+      </div>
+      <h1 class = "header1">Welcome to Best Burgers!</h1>
     </head>
-    <body>
-        <h1>Hello World!!!</h1>
-    </body>
+  </section>
+    
+  <body>
+    <main align="center">
+
+      <section class="burgers">
+        <h2 id="header2" >Select the Best Burger</h2>
+        <p>Here is where you pick YOUR best burger!</p>
+
+        <div class = "select">
+          <div class = "burger1">The Fire Burger</div>
+          <div class = "burger2">Classic Burger</div>
+          <div class = "burger3">Veggie Burger</div>
+          
+          <div class = "img1"><img src=https://www.readersdigest.ca/wp-content/uploads/sites/14/2015/11/gourmet-burger-1024x666.jpg width="300" title="The Fire Burger"></div>
+          <div class = "img2"><img src=https://res.cloudinary.com/hellofresh/image/upload/f_auto,fl_lossy,q_auto/v1/hellofresh_s3/image/beef-burger-with-caramelised-onion-jam-d6d4260d.jpg width="300" title="Classic Burger"></div>
+          <div class = "img3"><img src=https://www.thespruceeats.com/thmb/3dohMvPzPf_xylEK-U3eMyppXiM=/2048x1360/filters:no_upscale():max_bytes(150000):strip_icc()/vegan-mushroom-bean-burger-recipe-3378623-13_preview1-5b241897fa6bcc0036d2c9bf.jpeg width="300" title="Veggie Burger"></div>
+          
+          <div class = "info1">
+            <ul align="left">
+              <li>600kCal</li>
+              <li>
+                <span>Contains <span class="ingredient"> lactose</span></span>
+              </li>
+              <li> Contains<span class = "ingredient"> gluten</span></li>
+            </ul>
+          </div>
+
+          <div class = "info2">
+            <ul align="left">
+              <li>500kCal</li>
+              <li> Contains <span class="ingredient"> lactose</span></li>
+            </ul>
+          </div>
+          
+          <div class = "info3">
+            <ul align="left">
+              <li>500kCal</li>
+              <li class="ingredient" id="veg">Vegeterian</li>
+            </ul>
+          </div>
+          
+        </div>
+      </section>
+      
+      <section id = "custInfo">
+        <h2>Customer info</h2>
+        <p>Here you provide the necessary information.</p>
+        <h3 id="info">Delivery Information</h3>
+
+        <form>
+          <p>
+            <label for="Full name">Full name</label><br>
+            <input type="text" id="first- and last name" name="fn" required="required" placeholder="First- and last name">
+          </p>
+          <p>
+            <label for="Email">Email</label><br>
+            <input type="email" id="email" name="em" required="required" placeholder="E-mail address">
+          </p>
+          <p>
+            <label for="Street">Street</label><br>
+            <input type="text" id="Street" name="st" required="required" placeholder="Street">
+          </p>
+          <p>
+            <label for="House">House</label><br>
+            <input type="number" id="house nr" name="hn" required="required" placeholder="Houes Number">
+          </p>
+          <p>
+            <label for="payment method">Payment method</label><br>
+            <select id="payment method" name="paym">
+              <option>MasterCard</option>
+              <option>Visa</option>
+              <option>PayPal</option>
+              <option>Pay later</option>
+            </select>
+        </form>
+
+        <section class="form">
+          <form action="gender">
+            <label id="gender" for="gender">Gender</label><br>
+            <input type="radio" name="gender" value="male"> Male<br>
+            <input type="radio" name="gender" value="female"> Female<br>
+            <input type="radio" name="gender" value="do not wish to provide" checked="checked">Do not wish to provide<br>
+          </form>
+        </section>
+        
+        <button id="button" type="place order"><img src="https://cdn2.iconfinder.com/data/icons/shopping-e-commerce-2-1/32/Success-Place-Order-Complete-Shopping-Tick-512.png" width="20">Place order!</button>
+      </section>
+
+    </main>
+
+    <footer>
+      <hr>&copy; 2018 Best Burgers</hr>
+    </footer>
+
+  </body>
+
 </html>
