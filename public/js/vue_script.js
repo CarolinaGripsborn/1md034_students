@@ -71,7 +71,7 @@ function displayInfo(id, n, info, infoValues){
     document.getElementById(id).innerHTML = toDisplay;
 }
 
-
+/*
 new Vue({
     el: '#button',
     methods: {
@@ -90,7 +90,7 @@ new Vue({
         }   
     }
 });
-
+*/
 
 function menuChoice(){
     if(document.querySelector('#checkbox1:checked') != null){
@@ -132,15 +132,44 @@ var vm = new Vue({
         email: "empty",
         payment: "not chosen",
         gender: "not chosen",
-        coordinates: {"x": "", "y": ""}
+        coordinates: {"x": "", "y": ""},
+        orderId: 0
+        //orderList: []
     },
     methods: {
-        markDone: function() {
+        getNext: function () {
+            var lastOrder = Object.keys(this.orders).reduce(function (last, next) {
+                return Math.max(last, next);
+            }, 0);
+            return lastOrder + 1;
+        },
+        addOrder: function() {
             this.burger = menuChoice();
             this.name = document.getElementById("name").value;
             this.email = document.getElementById("email").value;
             this.payment = document.getElementById("payment method").value;
             this.gender = document.querySelector('input[name="gender"]:checked').value;
+            console.log("Button clicked!");
+            var customerInfo = getCustomerInfo();
+
+            displayInfo("displayName", 0, "Name: ", customerInfo);
+            displayInfo("displayEmail", 1, "Email: ", customerInfo);
+            displayInfo("displayPayment", 2, "Payment method: ", customerInfo);
+            displayInfo("displayGender", 3, "Gender: ", customerInfo);
+            displayInfo("displayMenuChoice", 4, "Menu choice: ", customerInfo);
+
+            document.getElementById("order").style.visibility = "visible";
+            
+            this.orderId++;
+            socket.emit("addOrder", { orderId: this.orderId, 
+                                      details: { x: this.coordinates.x, 
+                                                 y: this.coordinates.y},
+                                      orderItems: [this.burger],
+                                      name: this.name,
+                                      email: this.email,
+                                      payment: this.payment,
+                                      gender: this.gender
+                                    });
         },
         displayOrder: function() {
             var offset = {x: event.currentTarget.getBoundingClientRect().left,
@@ -148,9 +177,6 @@ var vm = new Vue({
             this.coordinates.x = event.clientX - 10 - offset.x;
             this.coordinates.y = event.clientY - 10 - offset.y;
             this.display = true;
-        },
-        addOrder: function() {
-            
-        } 
+        }
     }
 });

@@ -73,14 +73,6 @@
             <input type="email" id="email" name="em" required="required" placeholder="E-mail address">
           </p>
           <p>
-            <label for="Street">Street</label><br>
-            <input type="text" id="street" name="st" required="required" placeholder="Street">
-          </p>
-          <p>
-            <label for="House">House</label><br>
-            <input type="number" id="house" name="hn" required="required" placeholder="Houes Number">
-          </p>
-          <p>
             <label for="payment method">Payment method</label><br>
             <select id="payment method" name="paym">
               <option>MasterCard</option>
@@ -111,7 +103,7 @@
             </div>
           </div>
           
-          <button id="button" type="place order" v-on:click="markDone()"><img src="https://cdn2.iconfinder.com/data/icons/shopping-e-commerce-2-1/32/Success-Place-Order-Complete-Shopping-Tick-512.png" width="20">Place order!</button>
+          <button id="button" type="place order" v-on:click="addOrder()"><img src="https://cdn2.iconfinder.com/data/icons/shopping-e-commerce-2-1/32/Success-Place-Order-Complete-Shopping-Tick-512.png" width="20">Place order!</button>
       </section>
 
       <h3 id = "order">Your order</h3>
